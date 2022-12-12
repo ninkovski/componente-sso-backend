@@ -123,39 +123,6 @@ public class SsoController {
         reponse.add(menu);
         // segundo
         text = "{\n" +
-                "        \"id\": 4606,\n" +
-                "        \"title\": \"Reportes\",\n" +
-                "        \"icon\": \"fa fa-home\",\n" +
-                "        \"routerLink\": \"/reportes\",\n" +
-                "        \"target\": null,\n" +
-                "        \"clase\": \"sub\",\n" +
-                "        \"badge\": \"\",\n" +
-                "        \"badgeClase\": \"\",\n" +
-                "        \"children\": null\n" +
-                "    }";
-
-        menu = mapper.readValue(text, SsoMenuResponse.class);
-
-        text = "{\n" +
-                "        \"id\": 4607,\n" +
-                "        \"title\": \"Reporte de alertas\",\n" +
-                "        \"icon\": \"fa fa-home\",\n" +
-                "        \"routerLink\": \"/reportes/alertas\",\n" +
-                "        \"target\": null,\n" +
-                "        \"clase\": \"\",\n" +
-                "        \"badge\": \"\",\n" +
-                "        \"badgeClase\": \"\"\n" +
-//                "        \"children\": null\n" +
-                "    }";
-
-        children = mapper.readValue(text, SsoMenuResponse.class);
-        children.setChildren(new ArrayList<>());
-        childrenList = new ArrayList<>();
-        childrenList.add(children);
-        menu.setChildren(childrenList);
-        reponse.add(menu);
-        // tercero
-        text = "{\n" +
                 "        \"id\": 4605,\n" +
                 "        \"title\": \"Alertas\",\n" +
                 "        \"icon\": \"fa fa-home\",\n" +
@@ -187,10 +154,77 @@ public class SsoController {
         childrenList.add(children);
         menu.setChildren(childrenList);
         reponse.add(menu);
+        // tercero
 
 
+        text = "{\n" +
+                "        \"id\": 4606,\n" +
+                "        \"title\": \"Reportes\",\n" +
+                "        \"icon\": \"fa fa-home\",\n" +
+                "        \"routerLink\": \"/reportes\",\n" +
+                "        \"target\": null,\n" +
+                "        \"clase\": \"sub\",\n" +
+                "        \"badge\": \"\",\n" +
+                "        \"badgeClase\": \"\",\n" +
+                "        \"children\": null\n" +
+                "    }";
+
+        menu = mapper.readValue(text, SsoMenuResponse.class);
+
+        text = "{\n" +
+                "        \"id\": 4607,\n" +
+                "        \"title\": \"Reporte de alertas\",\n" +
+                "        \"icon\": \"fa fa-home\",\n" +
+                "        \"routerLink\": \"/reportes/alertas\",\n" +
+                "        \"target\": null,\n" +
+                "        \"clase\": \"\",\n" +
+                "        \"badge\": \"\",\n" +
+                "        \"badgeClase\": \"\"\n" +
+//                "        \"children\": null\n" +
+                "    }";
+
+        children = mapper.readValue(text, SsoMenuResponse.class);
+        children.setChildren(new ArrayList<>());
+        childrenList = new ArrayList<>();
+        childrenList.add(children);
+        menu.setChildren(childrenList);
+        reponse.add(menu);
+
+        // cuarto
 
 
+        text = "{\n" +
+                "        \"id\": 4611,\n" +
+                "        \"title\": \"RECA\",\n" +
+                "        \"icon\": \"fa fa-home\",\n" +
+                "        \"routerLink\": \"/reca-list\",\n" +
+                "        \"target\": null,\n" +
+                "        \"clase\": \"sub\",\n" +
+                "        \"badge\": \"\",\n" +
+                "        \"badgeClase\": \"\",\n" +
+                "        \"children\": null\n" +
+                "    }";
+
+        menu = mapper.readValue(text, SsoMenuResponse.class);
+
+        text = "{\n" +
+                "        \"id\": 4612,\n" +
+                "        \"title\": \"Registro de ficha RECA\",\n" +
+                "        \"icon\": \"fa fa-home\",\n" +
+                "        \"routerLink\": \"/reca-list/reca-list\",\n" +
+                "        \"target\": null,\n" +
+                "        \"clase\": \"\",\n" +
+                "        \"badge\": \"\",\n" +
+                "        \"badgeClase\": \"\"\n" +
+//                "        \"children\": null\n" +
+                "    }";
+
+        children = mapper.readValue(text, SsoMenuResponse.class);
+        children.setChildren(new ArrayList<>());
+        childrenList = new ArrayList<>();
+        childrenList.add(children);
+        menu.setChildren(childrenList);
+        reponse.add(menu);
         return reponse;
     }
 }
